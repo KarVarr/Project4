@@ -24,16 +24,21 @@
             </objects>
             <point key="canvasLocation" x="926.63551401869154" y="-27.213822894168469"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Page-->
         <scene sceneID="GcQ-2K-bWJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mUu-Hf-RhY" sceneMemberID="viewController">
+                <navigationController title="Page" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="mUu-Hf-RhY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TQR-Ik-X6T">
                         <rect key="frame" x="0.0" y="47" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.81124870449999997" green="0.93934530019999996" blue="0.50368110109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SoF-v7-TFc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vzR-ne-Lrg"/>
                     </connections>
