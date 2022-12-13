@@ -11,7 +11,7 @@ import WebKit
 class ViewController: UIViewController, WKNavigationDelegate {
     var webView: WKWebView!
     var progressView: UIProgressView!
-    var websites = ["apple.com", "hackingwithswift.com"]
+    var websites = ["apple.com", "hackingwithswift.com", "google.com", "yandex.ru", "mail.ru"]
     
     
     override func loadView()  {
@@ -27,18 +27,20 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView , action: #selector(webView.reload))
+        let back = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: webView, action: #selector(webView.goBack))
+        let forward = UIBarButtonItem(image: UIImage(systemName: "chevron.forward"), style: .plain, target: webView, action: #selector(webView.goForward))
         
         progressView = UIProgressView(progressViewStyle: .default)
         progressView.sizeToFit()
         let progressButton = UIBarButtonItem(customView: progressView)
         
         
-        toolbarItems = [progressButton, spacer, refresh]
+        toolbarItems = [progressButton, spacer,back, forward,refresh,]
         navigationController?.isToolbarHidden = false
         
         
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
-        
+      
         
         let url = URL(string: "https://www.\(websites[1])")!
         webView.load(URLRequest(url: url))
